@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
+import ExpenseItem from './custom components/ExpenseItem'
 
 function App() {
   
@@ -9,8 +10,10 @@ function App() {
     <>
      <h1>Let's get started</h1>
      <p>I am learning React</p> 
+     <ExpenseItem></ExpenseItem>
     </>
   )
 }
 
 export default App
+
