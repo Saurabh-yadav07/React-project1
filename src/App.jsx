@@ -1,4 +1,4 @@
-import Expenses from "./custom components/Expenses";
+import Expenses from "./custom-components/Expenses/Expenses";
 const expenses = [
   { id: '1', date: new Date(2023, 7, 15), title: 'Insurance', price: 100 },
   { id: '2', date: new Date(2023, 1, 14), title: "Pen", price: 50 },
