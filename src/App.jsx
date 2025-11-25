@@ -1,19 +1,23 @@
+import React from "react";
 import Expenses from "./custom-components/Expenses/Expenses";
 import NewExpense from "./custom-components/NewExpense/NewExpense";
-const expenses = [
-  { id: '1', date: new Date(2023, 7, 15), title: 'Insurance', price: 100 },
-  { id: '2', date: new Date(2023, 1, 14), title: "Pen", price: 50 },
-  { id: '3', date: new Date(2023, 8, 12), title: 'Book', price: 99 },
-  {id:'4',date:new Date(2025,6,29),title:'Laptop',price:250}
-]
-function App() {
- 
+
+const App = () => {
+  const expenses = [
+    { id: 1, title: "Insurance", date: new Date(2023, 7, 15), price: 100 },
+    { id: 2, title: "Book", date: new Date(2023, 8, 25), price: 10 },
+    { id: 3, title: "Pen", date: new Date(2023, 2, 10), price: 1 },
+    { id: 4, title: "Laptop", date: new Date(2023, 9, 17), price: 200 },
+  ];
+  const addExpenseHandler = (expense) => {
+    console.log(expense); 
+  }
   return (
     <div>
-      <NewExpense/>
-      <Expenses expenses={expenses}></Expenses>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
